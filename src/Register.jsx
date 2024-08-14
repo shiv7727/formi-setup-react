@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import FocusError from './Formik/components/FocusError';
 
 const phoneDigit = 20;
 const phoneRegExp =
@@ -108,6 +109,8 @@ const Register = () => {
 					{(formik) => {
 						return (
 							<Form>
+								<FocusError />
+
 								<div className='mb-4'>
 									<Field
 										name='firstName'
